@@ -1,0 +1,16 @@
+#include "ergokeeb.dtsi"
+
+&kscan0 {
+    col-gpios
+        = <&pro_micro 7 GPIO_ACTIVE_HIGH> // P0.11 - D7
+        , <&pro_micro 6 GPIO_ACTIVE_HIGH> // P1.00 - D6
+        , <&pro_micro 5 GPIO_ACTIVE_HIGH> // P0.24 - D5
+        , <&pro_micro 4 GPIO_ACTIVE_HIGH> // P0.22 - D4
+        , <&pro_micro 3 GPIO_ACTIVE_HIGH> // P0.20 - D3
+        , <&pro_micro 21 GPIO_ACTIVE_HIGH> // P0.31 - D21
+        ;
+};
+
+&default_transform { // Offset of 3 because the left side has 3 columns
+    col-offset = <6>;
+};
