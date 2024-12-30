@@ -2,14 +2,13 @@
 
 / {
     chosen {
-        zmk,physical-layout = &physical_layout0;
         zmk,kscan = &kscan0;
+        zmk,matrix-transform = &default_transform0;
     };
 
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         wakeup-source;
-
         diode-direction = "col2row";
 
         row-gpios
@@ -19,7 +18,7 @@
             ;
     };
 
-    default_transform: keymap_transform0 {
+    default_transform0: keymap_transform {
         compatible = "zmk,matrix-transform";
         columns = <12>;
         rows = <3>;
