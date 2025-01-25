@@ -13,10 +13,6 @@
     //    display-name = "Default Layout";
     //};
 
-    led0: leds {
-        gpios = <&pro_micro 10 GPIO_ACTIVE_LOW> // P0.09 - D10;
-    };
-
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         wakeup-source;
