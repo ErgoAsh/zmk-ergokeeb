@@ -19,9 +19,9 @@
         diode-direction = "row2col";
 
         row-gpios
-            = <&pro_micro 20 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)> // P0.29 - D20
-            , <&pro_micro 19 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)> // P0.02 - D19
-            , <&pro_micro 18 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)> // P1.15 - D29
+            = <&pro_micro 20 GPIO_ACTIVE_HIGH> // P0.29 - D20
+            , <&pro_micro 19 GPIO_ACTIVE_HIGH> // P0.02 - D19
+            , <&pro_micro 18 GPIO_ACTIVE_HIGH> // P1.15 - D29
             ;
     };
 
