@@ -11,6 +11,10 @@
         ;
 };
 
+&led_strip {
+    chain-length = <21>;
+};
+
 &default_transform0 { // Offset of 3 because the left side has 3 columns
     col-offset = <6>;
 };
