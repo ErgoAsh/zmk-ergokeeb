@@ -9,7 +9,7 @@
         ;
 
     col-gpios
-        = <&pro_micro 2  (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)> // P0.17 - D2
+        = <&pro_micro 2 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)> // P0.17 - D2
         , <&pro_micro 14 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)> // P1.11 - D14
         , <&pro_micro 15 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)> // P1.13 - D15
         , <&pro_micro 18 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)> // P1.15 - D18
