@@ -36,7 +36,7 @@
    &kp DEL    &kp B       &kp Y       &kp O       &kp U       &kp SQT         &kp DQT   &kp L   &kp D &kp W    &kp V &kp BSPC
    &kp ESC    &kp C       &kp I       &kp E       &kp A       &kp COMMA       &kp DOT   &kp H   &kp T &kp S    &kp N &kp Q
    &kp LALT   &kp G       &kp X       &kp J       &kp K       &kp MINUS       &kp QMARK &kp R   &kp M &kp F    &kp P &kp Z
-                          &kp TAB     &trans      &kp SPACE   &kp RET  &kp SPACE  &kp ENT
+                          &kp TAB     &trans      &kp SPACE   &kp RET  &kp SPACE  &kp ENTER
                         >;
                 };
                 
