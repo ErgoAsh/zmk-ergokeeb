@@ -77,7 +77,7 @@
         engram_layer {
             bindings = <
 &kp DEL              &kp B    &kp Y       &kp O        &kp U        &quotes        &dquotes             &kp L        &kp D        &kp W       &kp V    &kp BSPC
-&mt LEFT_GUI ESCAPE  &lt 7 C  &mt RALT I  &mt LSHFT E  &mt LCTRL A  &colons        &dots                &mt RCTRL H  &mt RSHFT T  &mt RALT S  &lt 7 N  &mt RGUI Q
+&mt LEFT_GUI ESCAPE  &lt 7 C  &mt RALT I  &mt LSHFT E  &mt LCTRL A  &commas        &dots                &mt RCTRL H  &mt RSHFT T  &mt RALT S  &lt 7 N  &mt RGUI Q
 &caps_word           &kp G    &kp X       &kp J        &kp K        &kp MINUS      &qmark               &kp R        &kp M        &kp F       &kp P    &kp Z
                                           &lt 5 TAB    &lt 4 LC(V)  &lt 3 LC(C)    &lt 6 LC(BACKSPACE)  &kp SPACE    &lt 4 ENTER
             >;
