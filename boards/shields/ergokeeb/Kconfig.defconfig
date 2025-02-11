@@ -10,9 +10,6 @@ endif #SHIELD_ERGOKEEB_LEFT
 if SHIELD_ERGOKEEB_RIGHT
     config ZMK_KEYBOARD_NAME # Name must be less than 16 characters long!
         default "ErgoKeeb R"
-
-    config ZMK_SPLIT_ROLE_CENTRAL
-        default y
 endif #SHIELD_ERGOKEEB_RIGHT
 
 

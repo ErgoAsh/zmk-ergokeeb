@@ -3,11 +3,10 @@ id: ergokeeb
 name: ErgoKeeb
 type: shield
 url: https://github.com/ErgoAsh/zmk-ergokeeb
-#requires: [pro_micro]
-#exposes: [i2c_oled]
+
 features:
   - keys
-#  - display
+
 siblings:
   - ergokeeb_left
   - ergokeeb_right
