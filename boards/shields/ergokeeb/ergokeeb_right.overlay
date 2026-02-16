@@ -1,23 +1,42 @@
 #include "ergokeeb.dtsi"
 
+// MCU left side
+// C3 - P0.09 - D10  # 3
+// R4 - P1.04 - D9           # 4
+// C6 - P1.04 - D8   # 6
+// C5 - P0.11 - D7   # 5
+// C4 - P1.00 - D6   # 4
+// R2 - P0.24 - D5           # 2
+// R3 - P0.24 - D4           # 3     
+
+// MCU right side
+// C2 - P0.29 - D20   # 2
+// C1 - P0.02 - D19   # 1
+// R1 - P1.15 - D18          # 1 
+
 &kscan0 {
     row-gpios
-        = <&pro_micro 3 GPIO_ACTIVE_HIGH> // P0.20 - D3
-        , <&pro_micro 4 GPIO_ACTIVE_HIGH> // P0.22 - D4
-        , <&pro_micro 5 GPIO_ACTIVE_HIGH> // P0.24 - D5                                                                                                                                                                                                                                                                                                                             
-        , <&pro_micro 6 GPIO_ACTIVE_HIGH> // P1.00 - D6
+        = <&pro_micro 18 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 5 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 4 GPIO_ACTIVE_HIGH>                                                                                                                                                                                                                                                                                                                            
+        , <&pro_micro 9 GPIO_ACTIVE_HIGH>
         ;
 
     col-gpios
-        = <&pro_micro 2 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)> // P0.17 - D2
-        , <&pro_micro 14 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)> // P1.11 - D14
-        , <&pro_micro 15 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)> // P1.13 - D15
-        , <&pro_micro 18 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)> // P1.15 - D18
-        , <&pro_micro 19 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)> // P0.02 - D19
-        , <&pro_micro 20 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)> // P0.29 - D20
+        = <&pro_micro 19 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)>
+        , <&pro_micro 20 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)>
+        , <&pro_micro 10 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)>
+        , <&pro_micro 6 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)>
+        , <&pro_micro 5 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)>
+        , <&pro_micro 4 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)>
         ;
 };
 
 &default_transform0 { // Offset of 6 because the left side has 6 columns
     col-offset = <6>;
 };
+
+
+
+
+
