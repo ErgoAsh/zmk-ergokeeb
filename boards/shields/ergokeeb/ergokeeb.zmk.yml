@@ -6,6 +6,8 @@ url: https://github.com/ErgoAsh/zmk-ergokeeb
 
 features:
   - keys
+  - underglow
+  - pointer
 
 siblings:
   - ergokeeb_left

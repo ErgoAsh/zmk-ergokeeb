@@ -1,18 +1,25 @@
 #include "ergokeeb.dtsi"
 
-// MCU left side
-// C3 - P0.09 - D10  # 3
-// R4 - P1.04 - D9           # 4
-// C6 - P1.04 - D8   # 6
-// C5 - P0.11 - D7   # 5
-// C4 - P1.00 - D6   # 4
-// R2 - P0.24 - D5           # 2
-// R3 - P0.22 - D4           # 3     
-
-// MCU right side
-// C2 - P0.29 - D20   # 2
-// C1 - P0.02 - D19   # 1
-// R1 - P1.15 - D18          # 1 
+/*
+ * ProMicro nRF52840 (nice!nano v2) pinout and usage table
+ * reference: https://nicekeyboards.com/docs/nice-nano/pinout-schematic
+ *
+ * | left pin | nRF52 pin |   usage   |       |   usage   | nRF52 pin | right pin |
+ * | :------- | :-------: | :-------: | :---: | :-------: | :-------: | :-------: |
+ * | BATTERY- | -         |           |       |           | -         | BATTERY+  |
+ * | D1 (TX)  | P0.06     |           |       |           | -         | RAW       |
+ * | D0 (RX)  | P0.08     |           |       |           | -         | GND       |
+ * | GND      | -         |           |       |           | -         | RESET     |
+ * | GND      | -         |           |       |           | -         | VDD       |
+ * | D2       | P0.17     |           |       |           | P0.31     | D21       |
+ * | D3       | P0.20     |           |       |      C2   | P0.29     | D20       |
+ * | D4       | P0.22     |  R3       |       |      C1   | P0.02     | D19       |
+ * | D5       | P0.24     |  R2       |       |  R1       | P1.15     | D18       |
+ * | D6       | P1.00     |      C4   |       |           | P1.13     | D15       |
+ * | D7       | P0.11     |      C5   |       | LED strip | P1.11     | D14       |
+ * | D8       | P1.04     |      C6   |       |           | P0.10     | D16       |
+ * | D9       | P1.06     |  R4       |       |      C3   | P0.09     | D10       |
+ */
 
 &kscan0 {
     row-gpios
@@ -22,6 +29,7 @@
         , <&pro_micro 9 GPIO_ACTIVE_HIGH>
         ;
 
+    // The column pins are listed in reverse order, starting with pin 8 instead of pin 19.
     col-gpios
         = <&pro_micro 8 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)>
         , <&pro_micro 7 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)>
@@ -32,7 +40,8 @@
         ;
 };
 
-&default_transform0 { // Offset of 6 because the left side has 6 columns
+&default_transform0 {
+    // Offsets the local right matrix to continue sequentially after the left matrix.
     col-offset = <6>;
 };
 
