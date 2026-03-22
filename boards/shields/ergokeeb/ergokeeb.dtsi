@@ -44,21 +44,10 @@
 
 / {
     chosen {
-        //zmk,physical-layout = &physical_layout0;
         zmk,kscan = &kscan0;
         zmk,matrix-transform = &default_transform0;
         zmk,underglow = &led_strip;
     };
-
-    ext_power: ext_power@0 {
-        compatible = "zmk,ext-power-generic";
-        control-gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
-    };
-
-    //physical_layout0: physical_layout_0 {
-    //    compatible = "zmk,physical-layout";
-    //    display-name = "Default Layout";
-    //};
 
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
